@@ -25,6 +25,8 @@ function seleccionarMascotaJugador(){
         alert('Seleccionaste a Capipepo')
     } else if (inputRatigueya.checked){
         alert('Seleccionaste a Ratigueya')
+    } else {
+        alert('Selecciona una mascota')                //Alert por si no se selecciona ninguna mascota 
     }
 }
 
