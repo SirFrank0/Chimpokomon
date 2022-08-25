@@ -1,11 +1,22 @@
 
+let ataqueJugador                   //Se crea varibale global (variables globales, se crean fuera de cualquier método, y las pueden usar todos. (las pueden usar cualquier método))
+
+
 //Se crea la funcion para que la escuhe el evento 'load'
 
 function iniciarJuego(){
     let botonMascotaJugador = document.getElementById('boton-mascota')                  //Se crea variable para invocar al "id=boton-mascota" de HTML
 
-botonMascotaJugador.addEventListener('click',seleccionarMascotaJugador)                 //Se le agrega un evento a la variable "botonMascotaJugador" para que invoque la funcion "seleccionarMascotaJugador" al hacer click
+    botonMascotaJugador.addEventListener('click',seleccionarMascotaJugador)                 //Se le agrega un evento a la variable "botonMascotaJugador" para que invoque la funcion "seleccionarMascotaJugador" al hacer click
 
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.addEventListener('click',ataqueFuego)
+
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.addEventListener('click',ataqueAgua)
+
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.addEventListener('click',ataqueTierra)
 }
 
 //Se crea una funcion para guardar el evento de mostrar mascota segun el input seleccionado
@@ -54,13 +65,32 @@ function seleccionarMascotaEnemigo(){
 }
 
 
+//Funciones para cambiar el contenido de la variante global ataqueJugador
 
+function ataqueFuego(){
+    ataqueJugador = 'FUEGO'
+    alert(ataqueJugador)
+}
+
+function ataqueAgua(){
+    ataqueJugador = 'AGUA'
+    alert(ataqueJugador)
+}
+
+function ataqueTierra(){
+    ataqueJugador = 'TIERRA'
+    alert(ataqueJugador)
+}
+
+
+
+//Se crea la funcion aleatorio para dar un numero aletorio entre 1 y 3 (mascotas)
 
 function aleatorio(min,max){
     return Math.floor(Math.random()*(max-min+1)+min)
 }
 
         
-//Se crea un evento para que el codigo JS arranque apenas se cargue la pagina 
+//Se crea un evento para que la funcion iniciarJuego arranque despues de que se cargue la pagina 
 
 window.addEventListener('load', iniciarJuego)
