@@ -17,14 +17,17 @@ function seleccionarMascotaJugador(){
     let inputCapipepo = document.getElementById('capipepo')
     let inputRatigueya = document.getElementById('ratigueya')
 
+    let spanMascotaJugador = document.getElementById('mascota-jugador')             //Se crea variable para llamar al span HTML de mascota-jugador para mostrar las vidas restantes de la moscota seleccionada
+
+
     //Se crea la condicion para notificar al usuario la mascota segun el input seleccionado
 
-    if (inputHipodoge.checked){                 //checked siginifca si el input, en este caso 'radio' es falso o verdadero (si esta seleccionado o no)
-        alert('Seleccionaste a Hipodoge')
+    if (inputHipodoge.checked){                 //.checked siginifca si el input, en este caso 'radio' es falso o verdadero (si esta seleccionado o no)
+        spanMascotaJugador.innerHTML = 'Hipodoge'   //.innetHTML permite modificar el HTML desde Javascript o (o manipular el DOM como se dice técnicamente)
     } else if (inputCapipepo.checked){
-        alert('Seleccionaste a Capipepo')
+        spanMascotaJugador.innerHTML = 'Capipepo'
     } else if (inputRatigueya.checked){
-        alert('Seleccionaste a Ratigueya')
+        spanMascotaJugador.innerHTML = 'Ratigueya'
     } else {
         alert('Selecciona una mascota')                //Alert por si no se selecciona ninguna mascota 
     }
