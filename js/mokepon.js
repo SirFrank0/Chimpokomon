@@ -31,6 +31,33 @@ function seleccionarMascotaJugador(){
     } else {
         alert('Selecciona una mascota')                //Alert por si no se selecciona ninguna mascota 
     }
+
+    seleccionarMascotaEnemigo()                     // llamamos a la funcion seleccionarMascotaEnemigo()  creada mas abajo
+}
+
+
+//Se crea la funcion seleccionarMascotaEnemigo() para que el enemigo seleccione su mascota aleatoriamente
+
+function seleccionarMascotaEnemigo(){
+    let mascotaAleatorio = aleatorio(1,3)                                    //Se crea la variable aleatorio para que el enemigo selccione su mascota
+    let spanMascotaEnemigo = document.getElementById('mascota-enemigo')        // Se crea variable que invoca el ID 'mascota-enemigo' para modificarlo con .innerHTML
+
+    if(mascotaAleatorio==1){
+        spanMascotaEnemigo.innerHTML = 'Hipodoge'       // el ID de HTML 'mascota-enemigo' se mofiica con .innerHTML segun la opcion del if
+
+    } else if(mascotaAleatorio==1){
+        spanMascotaEnemigo.innerHTML = 'Capipepo'
+        
+    } else {
+        spanMascotaEnemigo.innerHTML = 'Ratigueya'
+    }
+}
+
+
+
+
+function aleatorio(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min)
 }
 
         
