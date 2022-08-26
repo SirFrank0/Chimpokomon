@@ -1,6 +1,7 @@
 
-let ataqueJugador                   //Se crea varibale global (variables globales, se crean fuera de cualquier método, y las pueden usar todos. (las pueden usar cualquier método))
+let ataqueJugador                   //Se crea varibale global (variables globales, se crean fuera de cualquier método, y las pueden usar todos. (las pueden usar cualquier método y se pueden leer desde la consola))
 
+let ataqueEnemigo
 
 //Se crea la funcion para que la escuhe el evento 'load'
 
@@ -69,19 +70,35 @@ function seleccionarMascotaEnemigo(){
 
 function ataqueFuego(){
     ataqueJugador = 'FUEGO'
-    alert(ataqueJugador)
+
+    //Se llama a la funcion ataqueAleatorioEnemigo() despues de que el jugador selccione su propio ataque
+    ataqueAleatorioEnemigo()
 }
 
 function ataqueAgua(){
     ataqueJugador = 'AGUA'
-    alert(ataqueJugador)
+    ataqueAleatorioEnemigo()
 }
 
 function ataqueTierra(){
     ataqueJugador = 'TIERRA'
-    alert(ataqueJugador)
+    ataqueAleatorioEnemigo()
 }
 
+// Se crea la funcion ataqueAleatorioEnemigo() para que se selccionen aleatoriamente los ataques del enemigo
+
+function ataqueAleatorioEnemigo() {
+
+    let ataqueAleatorio = aleatorio(1,3)
+
+    if (ataqueAleatorio==1){
+        ataqueEnemigo = 'FUEGO'                 //la varitante global ataqueEnemigo toma el valor segun la condicion
+    } else if (ataqueAleatorio==2) {
+        ataqueEnemigo = 'AGUA'
+    } else {
+        ataqueEnemigo = 'TIERAA'
+    }
+}
 
 
 //Se crea la funcion aleatorio para dar un numero aletorio entre 1 y 3 (mascotas)
