@@ -96,7 +96,7 @@ function ataqueAleatorioEnemigo() {
     } else if (ataqueAleatorio==2) {
         ataqueEnemigo = 'AGUA'
     } else {
-        ataqueEnemigo = 'TIERAA'
+        ataqueEnemigo = 'TIERRA'
     }
 
     combate ()                              //Se llama la funcion 'combate' en este momento porque aqui es cuando los dos ataques (juagdor y enemigo) ya han sido selccionados
