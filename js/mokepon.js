@@ -99,16 +99,45 @@ function ataqueAleatorioEnemigo() {
         ataqueEnemigo = 'TIERAA'
     }
 
-    crearMensaje ()                              //Se llama la funcion crearMensaje en este momento porque aqui es cuando los dos ataques (juagdor y enemigo) ya han sido selccionados
+    combate ()                              //Se llama la funcion 'combate' en este momento porque aqui es cuando los dos ataques (juagdor y enemigo) ya han sido selccionados
 }
 
 
-function crearMensaje(){
+//Se crea funcion para hacer el combate
+
+function combate(){
+
+
+    if (ataqueEnemigo == ataqueJugador) {
+        crearMensaje("EMPATE")          //Se llama a la funcion 'crearMensaje' y que lo que esta dentro del parentesis cambie la variable 'resultado'
+      } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
+        crearMensaje("GANASTE")
+        
+      } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
+        crearMensaje("GANASTE")
+        
+      } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA') {
+        crearMensaje("GANASTE")
+       
+      } else {
+        crearMensaje("PERDISTE")
+        
+      }
+
+    }
+
+
+
+
+
+//Se crea funcion para mostrar el hotorial dinamico
+
+function crearMensaje(resultado){   // Se guarda la variable 'resultado' como argumento para utilizarla en la funcion 'combate'
     let sectionMensajes = document.getElementById('mensajes')       //Se crea variable para llamar al ID de HTML 'mensajes'
     
     let parrafo = document.createElement('p')               //Se crea variable 'parrafo' para crear elmento 'p' de HTML para luego ser moficada en la siguiente linea
     
-    parrafo.innerHTML ='Tu mascota atacó con ' + ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo + ' - PENDIENTE!!!'   //Se agrega el parrado para modificarlo con innetHTML mediante contatenacions de texto y variables globales
+    parrafo.innerHTML ='Tu mascota atacó con ' + ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo + ' - ' + resultado  //Se agrega el parrado para modificarlo con innetHTML mediante contatenacions de texto y variables globales
 
     sectionMensajes.appendChild(parrafo)            //Se usa .appendChild para insertar variable 'parrafo' dentro de la etiqueta con iD=mensajes de HTML para mostrar el historial de la batalla
 }
