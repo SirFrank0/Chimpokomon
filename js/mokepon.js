@@ -92,7 +92,7 @@ function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1,3)
 
     if (ataqueAleatorio==1){
-        ataqueEnemigo = 'FUEGO'                 //la varitante global ataqueEnemigo toma el valor segun la condicion
+        ataqueEnemigo = 'FUEGO'                 //La varitante global ataqueEnemigo toma el valor segun la condicion
     } else if (ataqueAleatorio==2) {
         ataqueEnemigo = 'AGUA'
     } else {
