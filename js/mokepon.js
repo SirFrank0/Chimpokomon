@@ -44,7 +44,7 @@ function seleccionarMascotaJugador(){
         alert('Selecciona una mascota')                //Alert por si no se selecciona ninguna mascota 
     }
 
-    seleccionarMascotaEnemigo()                     // llamamos a la funcion seleccionarMascotaEnemigo()  creada mas abajo
+    seleccionarMascotaEnemigo()                     // Llamamos a la funcion seleccionarMascotaEnemigo()  creada mas abajo
 }
 
 
