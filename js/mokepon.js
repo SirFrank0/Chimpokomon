@@ -55,7 +55,7 @@ function seleccionarMascotaEnemigo(){
     let spanMascotaEnemigo = document.getElementById('mascota-enemigo')        // Se crea variable que invoca el ID 'mascota-enemigo' para modificarlo con .innerHTML
 
     if(mascotaAleatorio==1){
-        spanMascotaEnemigo.innerHTML = 'Hipodoge'       // el ID de HTML 'mascota-enemigo' se mofiica con .innerHTML segun la opcion del if
+        spanMascotaEnemigo.innerHTML = 'Hipodoge'       // El ID de HTML 'mascota-enemigo' se mofiica con .innerHTML segun la opcion del if
 
     } else if(mascotaAleatorio==1){
         spanMascotaEnemigo.innerHTML = 'Capipepo'
