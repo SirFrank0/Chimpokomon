@@ -118,18 +118,27 @@ function combate(){
         crearMensaje("EMPATE")          //Se llama a la funcion 'crearMensaje' y que lo que esta dentro del parentesis cambie la variable 'resultado'
       } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
         crearMensaje("GANASTE")
+
+        vidasEnemigo--                                  //Se resta 1 a la variante global vidasEnemigo caada vez que ganamos
+        spanVidasEnemigo.innerHTML = vidasEnemigo       // Se agrega el valor restado al ID de HTML
         
       } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
         crearMensaje("GANASTE")
+
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
         
       } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA') {
         crearMensaje("GANASTE")
+
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
        
       } else {
         crearMensaje("PERDISTE") 
 
         vidasJugador--                                  //Se resta 1 a la vairabte global 3 cada vez que se pierde
-        spanVidasJugador.innerHTML = vidasJugador      // Se agrega el valo restado al ID de HTML
+        spanVidasJugador.innerHTML = vidasJugador      // Se agrega el valor restado al ID de HTML
         
       }
 
