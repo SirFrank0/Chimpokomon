@@ -175,7 +175,7 @@ function crearMensaje(resultado){   // Se guarda la variable 'resultado' como ar
     sectionMensajes.appendChild(parrafo)            //Se usa .appendChild para insertar variable 'parrafo' dentro de la etiqueta con iD=mensajes de HTML para mostrar el historial de la batalla
 }
 
-//Se crea funcion para modificar mensaje de si se gano o se perdio la partida
+//Se crea funcion para crear mensaje de si se gano o se perdio la partida
 
 function crearMensajeFinal(resultadoFinal){  
     let sectionMensajes = document.getElementById('mensajes')      
