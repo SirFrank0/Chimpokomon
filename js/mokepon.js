@@ -22,6 +22,9 @@ function iniciarJuego(){
 
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click',ataqueTierra)
+
+    let botonReiniciar = document.getElementById('boton-reiniciar')                 //Se crea variable para llmar al boton reiniciar desde HTML
+    botonReiniciar.addEventListener('click',reiniciarJuego)
 }
 
 //Se crea una funcion para guardar el evento de mostrar mascota segun el input seleccionado
@@ -186,6 +189,15 @@ function crearMensajeFinal(resultadoFinal){
 
     sectionMensajes.appendChild(parrafo)          
 }
+
+
+// Se cre la funcion para reiniciar el juego
+
+function reiniciarJuego(){
+    location.reload()                   //Reinicia la URL
+}
+
+
 
 
 //Se crea la funcion aleatorio para dar un numero aletorio entre 1 y 3 (mascotas)
