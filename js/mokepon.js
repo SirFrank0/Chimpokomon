@@ -4,8 +4,8 @@ let ataqueJugador                   //Se crea varibale global (variables globale
 let ataqueEnemigo
 
 
-let vidasJugador                    //Se crean variables globales para el contador de vidas
-let vidasEnemigo
+let vidasJugador = 3             //Se crean variables globales para el contador de vidas
+let vidasEnemigo = 3
 
 //Se crea la funcion para que la escuhe el evento 'load'
 
@@ -126,7 +126,10 @@ function combate(){
         crearMensaje("GANASTE")
        
       } else {
-        crearMensaje("PERDISTE")
+        crearMensaje("PERDISTE") 
+
+        vidasJugador--                                  //Se resta 1 a la vairabte global 3 cada vez que se pierde
+        spanVidasJugador.innerHTML = vidasJugador      // Se agrega el valo restado al ID de HTML
         
       }
 
