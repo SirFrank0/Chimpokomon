@@ -3,6 +3,10 @@ let ataqueJugador                   //Se crea varibale global (variables globale
 
 let ataqueEnemigo
 
+
+let vidasJugador                    //Se crean variables globales para el contador de vidas
+let vidasEnemigo
+
 //Se crea la funcion para que la escuhe el evento 'load'
 
 function iniciarJuego(){
@@ -107,6 +111,8 @@ function ataqueAleatorioEnemigo() {
 
 function combate(){
 
+    let spanVidasJugador = document.getElementById('vidas-jugador')  //Se crea variable para llamar el elemento vidas-juagdor de HTML
+    let spanVidasEnemigo = document.getElementById('vidas-enemigo')  // Se crea variable para llamar el elemento vidas-enemigo de HTML
 
     if (ataqueEnemigo == ataqueJugador) {
         crearMensaje("EMPATE")          //Se llama a la funcion 'crearMensaje' y que lo que esta dentro del parentesis cambie la variable 'resultado'
