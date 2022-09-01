@@ -142,10 +142,25 @@ function combate(){
         
       }
 
+      // Revisar numero de vidas para determinar ganador
+
+      revisarVidas()
+
     }
 
 
+function revisarVidas(){
 
+    if(vidasEnemigo==0){
+
+        crearMensajeFinal("Felicitaciones Ganaste!!!!")
+
+    } else if (vidasJugador==0){
+
+        crearMensajeFinal("Perdiste. Vuelve a intentarlo")
+
+    }
+}
 
 
 //Se crea funcion para mostrar el hotorial dinamico
@@ -158,6 +173,18 @@ function crearMensaje(resultado){   // Se guarda la variable 'resultado' como ar
     parrafo.innerHTML ='Tu mascota atacó con ' + ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo + ' - ' + resultado  //Se agrega el parrado para modificarlo con innetHTML mediante contatenacions de texto y variables globales
 
     sectionMensajes.appendChild(parrafo)            //Se usa .appendChild para insertar variable 'parrafo' dentro de la etiqueta con iD=mensajes de HTML para mostrar el historial de la batalla
+}
+
+//Se crea funcion para modificar mensaje de si se gano o se perdio la partida
+
+function crearMensajeFinal(resultadoFinal){  
+    let sectionMensajes = document.getElementById('mensajes')      
+    
+    let parrafo = document.createElement('p')              
+    
+    parrafo.innerHTML = resultadoFinal
+
+    sectionMensajes.appendChild(parrafo)          
 }
 
 
