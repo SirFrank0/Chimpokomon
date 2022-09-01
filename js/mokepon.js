@@ -187,7 +187,19 @@ function crearMensajeFinal(resultadoFinal){
     
     parrafo.innerHTML = resultadoFinal
 
-    sectionMensajes.appendChild(parrafo)          
+    sectionMensajes.appendChild(parrafo)    
+
+
+    // Se desabilitan los botonenes de ataque cuando se pierde o se gana
+    
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = true
+
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.disabled = true
+
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.disabled = true
 }
 
 
