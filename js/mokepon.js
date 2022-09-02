@@ -14,6 +14,10 @@ function iniciarJuego(){
     let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
     sectionSeleccionarAtaque.style.display = 'none'                                         //Se oculta etiqueta de HTML con JS
 
+    let sectionReiniciar = document.getElementById('reiniciar')            //Se crea variable para llamar a la seccion reiniciar de HTML
+    sectionReiniciar.style.display = 'none'                                         //Se oculta etiqueta de HTML con JS
+
+
     let botonMascotaJugador = document.getElementById('boton-mascota')                  //Se crea variable para invocar al "id=boton-mascota" de HTML
     botonMascotaJugador.addEventListener('click',seleccionarMascotaJugador)                 //Se le agrega un evento a la variable "botonMascotaJugador" para que invoque la funcion "seleccionarMascotaJugador" al hacer click
 
@@ -209,6 +213,9 @@ function crearMensajeFinal(resultadoFinal){
 
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.disabled = true
+
+    let sectionReiniciar = document.getElementById('reiniciar')            //Se crea variable para llamar a la seccion reiniciar de HTML
+    sectionReiniciar.style.display = 'block'  
 }
 
 
