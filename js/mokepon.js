@@ -34,6 +34,8 @@ function iniciarJuego(){
 
 function seleccionarMascotaJugador(){      
     
+    let sectionSeleccionarMascota = document.getElementById('sel-mascota')            //Se crea variable para llamar a la seccion seleccionar-mascota de HTML
+    sectionSeleccionarMascota.style.display = 'none'                                //Se oculta etiqueta de HTML con JS
     
     let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
     sectionSeleccionarAtaque.style.display = 'block'                                //Se muestra etiqueta de HTML con JS
