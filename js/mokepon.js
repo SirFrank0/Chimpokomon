@@ -10,8 +10,11 @@ let vidasEnemigo = 3
 //Se crea la funcion para que la escuhe el evento 'load'
 
 function iniciarJuego(){
-    let botonMascotaJugador = document.getElementById('boton-mascota')                  //Se crea variable para invocar al "id=boton-mascota" de HTML
 
+    let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
+    sectionSeleccionarAtaque.style.display = 'none'                                         //Se oculta etiqueta de HTML con JS
+
+    let botonMascotaJugador = document.getElementById('boton-mascota')                  //Se crea variable para invocar al "id=boton-mascota" de HTML
     botonMascotaJugador.addEventListener('click',seleccionarMascotaJugador)                 //Se le agrega un evento a la variable "botonMascotaJugador" para que invoque la funcion "seleccionarMascotaJugador" al hacer click
 
     let botonFuego = document.getElementById('boton-fuego')
@@ -29,7 +32,11 @@ function iniciarJuego(){
 
 //Se crea una funcion para guardar el evento de mostrar mascota segun el input seleccionado
 
-function seleccionarMascotaJugador(){            
+function seleccionarMascotaJugador(){      
+    
+    
+    let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
+    sectionSeleccionarAtaque.style.display = 'block'                                //Se muestra etiqueta de HTML con JS
     
     //Se crean variables para llamarlas al crear condiciones
     let inputHipodoge = document.getElementById('hipodoge')
