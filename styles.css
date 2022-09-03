@@ -11,3 +11,8 @@
     justify-content: center;    /* Se alinean los elemento de forma vertical*/
     align-items: center;        /* Se alinean los elemento de forma horizontal*/
 }
+
+
+input{
+    display: none;              /* Ocultamos los input radio*/
+}
