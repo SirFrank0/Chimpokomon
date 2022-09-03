@@ -13,6 +13,19 @@
 }
 
 
+.tarjeta-de-mokepon{            /* Se crea class para modificar las cajas de los mokepones*/
+
+    width: 100px;
+    height: 100px;
+    background: forestgreen;
+    padding: 10px;
+    box-sizing: border-box;    /*El tamano del padding se alineara al borde*/
+    border: 1px solid yellow;  /* tamano   tipo de borde    color*/
+    margin: 10px;
+
+}
+
+
 input{
     display: none;              /* Ocultamos los input radio*/
 }
