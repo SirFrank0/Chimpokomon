@@ -1,8 +1,14 @@
 #titulo {                           
-    color: blueviolet;
+    color: #1CD6CE;
     width: 310px;
     height: 50px;
-    background-color: bisque;
+    background-color: #293462;
+    border: 2px solid #FEDB39;
+
+    /*Se alinean items con flex*/
+    align-items: center; 
+    display: flex;  
+    justify-content: center;
 }
 
 #sel-mascota{                   /*Se selecciona la etiqueta padre*/
@@ -17,11 +23,17 @@
 
     width: 100px;
     height: 100px;
-    background: forestgreen;
+    background: #1CD6CE;
     padding: 10px;
     box-sizing: border-box;    /*El tamano del padding se alineara al borde*/
-    border: 1px solid yellow;  /* tamano   tipo de borde    color*/
+    border: 1px solid #D61C4E;  /* tamano   tipo de borde    color*/
     margin: 10px;
+    color: aliceblue;
+
+    /*Se alinean items con flex*/
+    align-items: center; 
+    display: flex;  
+    justify-content: center;
 
 }
 
