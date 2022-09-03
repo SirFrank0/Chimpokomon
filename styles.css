@@ -4,3 +4,7 @@
     height: 50px;
     background-color: bisque;
 }
+
+#sel-mascota{
+    display: flex;              /* Le indicamos a CSS que vamos a reabajr con flex para este elemento*/
+}
