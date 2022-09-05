@@ -41,3 +41,7 @@
 input{
     display: none;              /* Ocultamos los input radio*/
 }
+
+body{
+    background-color: #FEDB39;
+}
