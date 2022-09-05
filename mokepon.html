@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Mokepon</title>
+        <title>Chimpokomon</title>
         
         <link rel="stylesheet" href="/styles.css">      <!--Se linkea archivo CSS-->
         
@@ -14,16 +14,22 @@
 
             <h1 id="titulo"> Chimpokomon! 🔥💧🌳</h1>                <!--Se agrega id para modificar la etiqueta con CSS-->
 
-            <h2>Elige a tu mascota:</h2>                
+            <h2>Elige a tu mascota:</h2>  
+            
+         <div class="tarjetas">
 
             <label class="tarjeta-de-mokepon" for="hipodoge">Hipodoge</label>                              <!--Se agrega el atributo "for" con el "id" del mnombre de la mascota para que al dir click encima del nombre se selccione el "radio"-->
-            <input type="radio" name="mascota" id="hipodoge"/>                <!-- Se utiliza el atributo "name" para agrupar los radio, si no se hace esto, cuando se selecciona mas de un radio, estos van a quedar seleccionados simultaneamente -->
-            
+             <input type="radio" name="mascota" id="hipodoge"/>                <!-- Se utiliza el atributo "name" para agrupar los radio, si no se hace esto, cuando se selecciona mas de un radio, estos van a quedar seleccionados simultaneamente -->
+              
             <label class="tarjeta-de-mokepon" for="capipepo">Capipepo</label>
             <input type="radio" name="mascota" id="capipepo"/>
-            
+                
             <label class="tarjeta-de-mokepon" for="ratigueya">Ratigueya</label>
             <input type="radio"name="mascota" id="ratigueya"/>
+                
+
+         </div>
+
 
 
             <button id="boton-mascota">Seleccionar</button>
