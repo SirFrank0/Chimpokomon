@@ -42,7 +42,7 @@ function seleccionarMascotaJugador(){
     sectionSeleccionarMascota.style.display = 'none'                                //Se oculta etiqueta de HTML con JS
     
     let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
-    sectionSeleccionarAtaque.style.display = 'block'                                //Se muestra etiqueta de HTML con JS
+    sectionSeleccionarAtaque.style.display = 'flex'                                //Se muestra etiqueta de HTML con JS... Se cambia de block a flex porque es la tecnologia que usamos
     
     //Se crean variables para llamarlas al crear condiciones
     let inputHipodoge = document.getElementById('hipodoge')
