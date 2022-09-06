@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    background-color: #512D6D;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+
+
 #titulo {                           
-    color: #1CD6CE;
-    width: 310px;
-    height: 50px;
-    background-color: #293462;
-    border: 2px solid #FEDB39;
+    color: #00C1D4;
+    width: 580px;
+    height: 100px;
+    font-size: 42px;
 
     /*Se alinean items con flex*/
     align-items: center; 
     display: flex;  
     justify-content: center;
+}
+
+.subtitulo{
+    color: #EEEEEE;
 }
 
 #sel-mascota{                   /*Se selecciona la etiqueta padre*/
@@ -18,17 +31,23 @@
     align-items: center;        /* Se alinean los elemento de forma horizontal*/
 }
 
+.tarjetas{
+    display: flex;
+    gap: 10px;              /* gap sirve para dar un espaciado*/
+}
+
+
 
 .tarjeta-de-mokepon{            /* Se crea class para modificar las cajas de los mokepones*/
 
     width: 100px;
     height: 100px;
-    background: #1CD6CE;
+    background: #00C1D4;
     padding: 10px;
     box-sizing: border-box;    /*El tamano del padding se alineara al borde*/
     border: 1px solid #D61C4E;  /* tamano   tipo de borde    color*/
-    margin: 10px;
-    color: aliceblue;
+    color: #512D6D;
+    font-size: 8px;
 
     /*Se alinean items con flex*/
     align-items: center; 
@@ -42,6 +61,3 @@ input{
     display: none;              /* Ocultamos los input radio*/
 }
 
-body{
-    background-color: #FEDB39;
-}
