@@ -66,6 +66,17 @@ body{
     width: 90px;
 }
 
+#boton-mascota{
+    width: 174px;
+    height: 32px;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: #F8485E;
+    color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+}
+
 
 input{
     display: none;              /* Ocultamos los input radio*/

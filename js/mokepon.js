@@ -62,6 +62,7 @@ function seleccionarMascotaJugador(){
         spanMascotaJugador.innerHTML = 'Ratigueya'
     } else {
         alert('Selecciona una mascota')                //Alert por si no se selecciona ninguna mascota 
+        location.reload()                               // Se recarga la pagina si no se selecciona una mascota
     }
 
     seleccionarMascotaEnemigo()                     // Llamamos a la funcion seleccionarMascotaEnemigo()  creada mas abajo
