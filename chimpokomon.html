@@ -12,7 +12,7 @@
 
         <section id="sel-mascota">
 
-            <h1 id="titulo"> Chimpokomon!</h1>                <!--Se agrega id para modificar la etiqueta con CSS-->
+            <h1 class="titulo"> Chimpokomon!</h1>                <!--Se agrega id para modificar la etiqueta con CSS-->
 
             <h2 class="subtitulo">Elige a tu mascota:</h2>  
             
@@ -47,28 +47,36 @@
 
         <section id="sel-ataque">
 
-            <h2>Elige tu ataque:</h2>
-            <p>Tu mascota <span id="mascota-jugador"></span id> tiene <span id="vidas-jugador">3</span> vidas</p>                    <!--Se agrega SPAN para que el 3 vaya cambiando en funcion del codigo "Dinamico"-->
-            <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>            <!--Se agerga id del contador de vidas para cambiarlo con JS-->  
+            <h1 class="titulo"> Chimpokomon!</h1>              <!--Se coloca otra vez el titulo para que aparezca cuando se selecciona la mascota-->
 
-            <p>                                         <!--Es una buena practica nunca dejar botones fuera de un contenedor-->
+            <h2>Elige tu ataque:</h2>
+
+            <div>                                         <!--Es una buena practica nunca dejar botones fuera de un contenedor-->
                 <button id="boton-fuego">Fuego 🔥</button>
                 <button id="boton-agua">Agua 💧</button>
                 <button id="boton-tierra">Tierra 🌳</button>
-            </p>
+            </div>
+         
+
+            <div>
+                <section id="mensajes">                <!--Seccion para ver el historial de los combates entre mascotas-->
+
+                    <!--Aca vamos a insertar lel hsitorial con la funcion crearMensaje de JS.-->
+
+                </section>
+
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Reiniciar</button>
+                </section>
+            </div>
+
             
-        </section>
+            <div>
+                <p>Tu mascota <span id="mascota-jugador"></span id> tiene <span id="vidas-jugador">3</span> vidas</p>                    <!--Se agrega SPAN para que el 3 vaya cambiando en funcion del codigo "Dinamico"-->
+                <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>            <!--Se agerga id del contador de vidas para cambiarlo con JS-->  
+            </div>
 
-        <section id="mensajes">                <!--Seccion para ver el historial de los combates entre mascotas-->
-
-                                                    <!--Aca vamos a insertar lel hsitorial con la funcion crearMensaje de JS.-->
-
-        </section>
-
-
-
-        <section id="reiniciar">
-            <button id="boton-reiniciar">Reiniciar</button>
+            
         </section>
 
     </body>
