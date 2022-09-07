@@ -31,7 +31,7 @@ body{
     align-items: center;        /* Se alinean los elemento de forma horizontal */
 }
 
-.tarjetas{
+.tarjetas, .tarjetas-ataques{
     display: flex;
     gap: 10px;              /* gap sirve para dar un espaciado*/
 }
@@ -127,7 +127,30 @@ body{
     
 }
 
+.ataques{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    text-align: center;
+    color: #EEEEEE;
+    line-height: 24px;
+}
+
 input{
     display: none;              /* Ocultamos los input radio*/
 }
 
+
+@media (max-width: 360px){
+    .tarjetas, .tarjetas-ataques{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .titulo{
+        font-size: 28px;
+    }
+
+    .subtitulo{
+        font-size: 16px;
+    }
+}

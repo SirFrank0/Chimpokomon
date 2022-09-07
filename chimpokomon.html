@@ -53,7 +53,7 @@
             <h2 class="subtitulo">Elige tu ataque:</h2>  
 
 
-            <div>                                         <!--Es una buena practica nunca dejar botones fuera de un contenedor-->
+            <div class="tarjetas-ataques">                                         <!--Es una buena practica nunca dejar botones fuera de un contenedor-->
                 <button id="boton-fuego" class="estilo-boton">Fuego 🔥</button>
                 <button id="boton-agua"  class="estilo-boton">Agua 💧</button>
                 <button id="boton-tierra"  class="estilo-boton">Tierra 🌳</button>
@@ -66,24 +66,19 @@
                     <section id="reiniciar">
                         <button id="boton-reiniciar">Reiniciar</button>
                     </section>                                        
-     
-               
-
-            
-
-            
+               </div>
 
 
+            <div class="ataques">
+                <div>
+                    <p>Tu <span id="mascota-jugador"></span id> tiene <span id="vidas-jugador">3</span> vidas</p>                    <!--Se agrega SPAN para que el 3 vaya cambiando en funcion del codigo "Dinamico"-->
+                    <div id="ataques-del-jugador"></div>
+                </div>
 
-
-            </div>
-
-
-            <div>
-                <div id="ataques-del-jugador"></div>
-                <div id="ataques-del-enemigo"></div>
-                <p>Tu mascota <span id="mascota-jugador"></span id> tiene <span id="vidas-jugador">3</span> vidas</p>                    <!--Se agrega SPAN para que el 3 vaya cambiando en funcion del codigo "Dinamico"-->
-                <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>            <!--Se agerga id del contador de vidas para cambiarlo con JS-->  
+                <div>
+                    <p><span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>            <!--Se agerga id del contador de vidas para cambiarlo con JS-->  
+                    <div id="ataques-del-enemigo"></div>
+                </div>               
             </div>
 
             
