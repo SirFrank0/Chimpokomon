@@ -28,7 +28,7 @@ body{
     display: flex;              /* Le indicamos a CSS que vamos a reabajr con flex para este elemento*/
     flex-direction: column;     /* Se posicionan los elementos de forma vertical*/
     justify-content: center;    /* Se alinean los elemento de forma vertical*/
-    align-items: center;        /* Se alinean los elemento de forma horizontal*/
+    align-items: center;        /* Se alinean los elemento de forma horizontal */
 }
 
 .tarjetas{
