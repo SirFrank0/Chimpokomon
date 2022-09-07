@@ -182,21 +182,32 @@ function revisarVidas(){
 
 //Se crea funcion para mostrar el hotorial dinamico
 
-function crearMensaje(resultado){   // Se guarda la variable 'resultado' como argumento para utilizarla en la funcion 'combate'
-    let sectionMensajes = document.getElementById('mensajes')       //Se crea variable para llamar al ID de HTML 'mensajes'
+function crearMensaje(resultado){                                            // Se guarda la variable 'resultado' como argumento para utilizarla en la funcion 'combate'
+    let sectionMensajes = document.getElementById('resultado')                  //Se crea variable para llamar al ID de HTML 
+    let ataquesDelJugador = document.getElementById('ataques-del-jugador')     
+    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')         
     
-    let parrafo = document.createElement('p')               //Se crea variable 'parrafo' para crear elmento 'p' de HTML para luego ser moficada en la siguiente linea
     
-    parrafo.innerHTML ='Tu mascota atacó con ' + ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo + ' - ' + resultado  //Se agrega el parrado para modificarlo con innetHTML mediante contatenacions de texto y variables globales
+    let nuevoAtaqueDelJugador = document.createElement('p')               //Se crea variable 'parrafo' para crear elmento 'p' de HTML para luego ser moficada en la siguiente linea
+    let nuevoAtaqueDelEnemigo = document.createElement('p')
 
-    sectionMensajes.appendChild(parrafo)            //Se usa .appendChild para insertar variable 'parrafo' dentro de la etiqueta con iD=mensajes de HTML para mostrar el historial de la batalla
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+
+
+    ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)  //Se usa .appendChild para insertar variable 'parrafo' dentro de la etiqueta con iD=mensajes de HTML para mostrar el historial de la batalla
+    ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
+
 }
 
 //Se crea funcion para crear mensaje de si se gano o se perdio la partida
 
 function crearMensajeFinal(resultadoFinal){  
     let sectionMensajes = document.getElementById('mensajes')      
-    
+
+
     let parrafo = document.createElement('p')              
     
     parrafo.innerHTML = resultadoFinal
@@ -220,7 +231,7 @@ function crearMensajeFinal(resultadoFinal){
 }
 
 
-// Se cre la funcion para reiniciar el juego
+// Se crea la funcion para reiniciar el juego
 
 function reiniciarJuego(){
     location.reload()                   //Reinicia la URL

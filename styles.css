@@ -99,6 +99,15 @@ body{
     
 }
 
+
+#mensajes{
+    width: 328px;
+    background: #EEEEEE;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
 input{
     display: none;              /* Ocultamos los input radio*/
 }

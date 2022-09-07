@@ -61,11 +61,17 @@
          
 
             <div>
-                <section id="mensajes">                <!--Seccion para ver el historial de los combates entre mascotas-->
+               <section id="mensajes">                                  <!--Seccion para ver el historial de los combates entre mascotas-->
+                    <p id="resultado">Buena suerte!</p>
+                                                                         <!--Aca vamos a insertar lel hsitorial con la funcion crearMensaje de JS.-->
+               </section>
+               
 
-                    <!--Aca vamos a insertar lel hsitorial con la funcion crearMensaje de JS.-->
+            
 
-                </section>
+            
+
+
 
                 <section id="reiniciar">
                     <button id="boton-reiniciar">Reiniciar</button>
@@ -74,6 +80,8 @@
 
 
             <div>
+                <div id="ataques-del-jugador"></div>
+                <div id="ataques-del-enemigo"></div>
                 <p>Tu mascota <span id="mascota-jugador"></span id> tiene <span id="vidas-jugador">3</span> vidas</p>                    <!--Se agrega SPAN para que el 3 vaya cambiando en funcion del codigo "Dinamico"-->
                 <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>            <!--Se agerga id del contador de vidas para cambiarlo con JS-->  
             </div>
