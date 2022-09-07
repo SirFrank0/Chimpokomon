@@ -132,27 +132,27 @@ function combate(){
     let spanVidasEnemigo = document.getElementById('vidas-enemigo')  // Se crea variable para llamar el elemento vidas-enemigo de HTML
 
     if (ataqueEnemigo == ataqueJugador) {
-        crearMensaje("EMPATE")          //Se llama a la funcion 'crearMensaje' y que lo que esta dentro del parentesis cambie la variable 'resultado'
+        crearMensaje("Empataste este turno")          //Se llama a la funcion 'crearMensaje' y que lo que esta dentro del parentesis cambie la variable 'resultado'
       } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
-        crearMensaje("GANASTE")
+        crearMensaje("Ganaste este turno")
 
         vidasEnemigo--                                  //Se resta 1 a la variante global vidasEnemigo caada vez que ganamos
         spanVidasEnemigo.innerHTML = vidasEnemigo       // Se agrega el valor restado al ID de HTML
         
       } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
-        crearMensaje("GANASTE")
+        crearMensaje("Ganaste este turno")
 
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
         
       } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA') {
-        crearMensaje("GANASTE")
+        crearMensaje("Ganaste este turno")
 
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
        
       } else {
-        crearMensaje("PERDISTE") 
+        crearMensaje("Perdiste este turno") 
 
         vidasJugador--                                  //Se resta 1 a la vairabte global 3 cada vez que se pierde
         spanVidasJugador.innerHTML = vidasJugador      // Se agrega el valor restado al ID de HTML
@@ -170,11 +170,11 @@ function revisarVidas(){
 
     if(vidasEnemigo==0){
 
-        crearMensajeFinal("Felicitaciones Ganaste!!!!")
+        crearMensajeFinal("Felicitaciones!<br>Ganaste la partida!")
 
     } else if (vidasJugador==0){
 
-        crearMensajeFinal("Perdiste. Vuelve a intentarlo")
+        crearMensajeFinal("Perdiste la partida.<br>Vuelve a intentarlo")
 
     }
 }
@@ -205,15 +205,10 @@ function crearMensaje(resultado){                                            // 
 //Se crea funcion para crear mensaje de si se gano o se perdio la partida
 
 function crearMensajeFinal(resultadoFinal){  
-    let sectionMensajes = document.getElementById('mensajes')      
+    let sectionMensajes = document.getElementById('resultado')      
 
-
-    let parrafo = document.createElement('p')              
-    
-    parrafo.innerHTML = resultadoFinal
-
-    sectionMensajes.appendChild(parrafo)    
-
+    sectionMensajes.innerHTML = resultadoFinal
+ 
 
     // Se desabilitan los botonenes de ataque cuando se pierde o se gana
     
