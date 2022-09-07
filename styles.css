@@ -138,6 +138,10 @@ input{
     display: none;              /* Ocultamos los input radio*/
 }
 
+input:checked + label{                  /* :checked es una pseudoclase para modificar un elemnto cuando esta clickeado*/
+    background-color: #EEEEEE;
+}
+
 .ataques-jugador, .ataques-enemigo{                 /*Elmentos con grid y flex ya que son padre e hijos al mismo tiempo*/
     display: flex;
     flex-direction: column;
