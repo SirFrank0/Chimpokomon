@@ -130,7 +130,6 @@ body{
 .ataques{
     display: grid;
     grid-template-columns: 300px 300px;
-    text-align: center;
     color: #EEEEEE;
     line-height: 24px;
 }
@@ -139,11 +138,18 @@ input{
     display: none;              /* Ocultamos los input radio*/
 }
 
+.ataques-jugador, .ataques-enemigo{                 /*Elmentos con grid y flex ya que son padre e hijos al mismo tiempo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-@media (max-width: 360px){
+
+@media (max-width: 360px){                      /*@media sirve para establecer el responsive design*/
     .tarjetas, .tarjetas-ataques{
         flex-direction: column;
-        gap: 0px;
+        
     }
 
     .titulo{
@@ -153,4 +159,10 @@ input{
     .subtitulo{
         font-size: 16px;
     }
+
+    .ataques{
+        font-size: 12px;
+        grid-template-columns: 150px 150px;
+    }
+
 }
