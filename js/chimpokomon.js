@@ -244,4 +244,4 @@ function aleatorio(min,max){
         
 //Se crea un evento para que la funcion iniciarJuego arranque despues de que se cargue la pagina 
 
-window.addEventListener('load', iniciarJuego)
+window.addEventListener('load', iniciarJuego) 
