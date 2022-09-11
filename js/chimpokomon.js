@@ -4,7 +4,7 @@ let ataqueJugador                   //Se crea varibale global (variables globale
 let ataqueEnemigo
 
 
-let vidasJugador = 3             // Se crean variables globales para el contador de vidas
+let vidasJugador = 3             // Se crean variables globales para el contador de vidas.
 let vidasEnemigo = 3
 
 //Se crea la funcion para que la escuhe el evento 'load'
