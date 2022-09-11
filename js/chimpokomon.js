@@ -1,26 +1,26 @@
-let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
-let sectionReiniciar = document.getElementById('reiniciar')            //Se crea variable para llamar a la seccion reiniciar de HTML
-let botonMascotaJugador = document.getElementById('boton-mascota')                  //Se crea variable para invocar al "id=boton-mascota" de HTML
-let botonFuego = document.getElementById('boton-fuego')
-let botonAgua = document.getElementById('boton-agua')
-let botonTierra = document.getElementById('boton-tierra')
-let botonReiniciar = document.getElementById('boton-reiniciar')                 //Se crea variable para llmar al boton reiniciar desde HTML
+const botonMascotaJugador = document.getElementById('boton-mascota')                  //Se crea variable para invocar al "id=boton-mascota" de HTML
+const botonFuego = document.getElementById('boton-fuego')
+const sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
+const sectionReiniciar = document.getElementById('reiniciar')            //Se crea variable para llamar a la seccion reiniciar de HTML
+const botonAgua = document.getElementById('boton-agua')
+const botonTierra = document.getElementById('boton-tierra')
+const botonReiniciar = document.getElementById('boton-reiniciar')                 //Se crea variable para llmar al boton reiniciar desde HTML
 
-let sectionSeleccionarMascota = document.getElementById('sel-mascota')            //Se crea variable para llamar a la seccion seleccionar-mascota de HTML
+const sectionSeleccionarMascota = document.getElementById('sel-mascota')            //Se crea variable para llamar a la seccion seleccionar-mascota de HTML
 //Se crean variables para llamarlas al crear condiciones
-let inputHipodoge = document.getElementById('hipodoge')
-let inputCapipepo = document.getElementById('capipepo')
-let inputRatigueya = document.getElementById('ratigueya')
-let spanMascotaJugador = document.getElementById('mascota-jugador')             //Se crea variable para llamar al span HTML de mascota-jugador para mostrar las vidas restantes de la moscota seleccionada
+const inputHipodoge = document.getElementById('hipodoge')
+const inputCapipepo = document.getElementById('capipepo')
+const inputRatigueya = document.getElementById('ratigueya')
+const spanMascotaJugador = document.getElementById('mascota-jugador')             //Se crea variable para llamar al span HTML de mascota-jugador para mostrar las vidas restantes de la moscota seleccionada
 
-let spanMascotaEnemigo = document.getElementById('mascota-enemigo')        // Se crea variable que invoca el ID 'mascota-enemigo' para modificarlo con .innerHTML
+const spanMascotaEnemigo = document.getElementById('mascota-enemigo')        // Se crea variable que invoca el ID 'mascota-enemigo' para modificarlo con .innerHTML
 
-let spanVidasJugador = document.getElementById('vidas-jugador')  //Se crea variable para llamar el elemento vidas-juagdor de HTML
-let spanVidasEnemigo = document.getElementById('vidas-enemigo')  // Se crea variable para llamar el elemento vidas-enemigo de HTML
+const spanVidasJugador = document.getElementById('vidas-jugador')  //Se crea variable para llamar el elemento vidas-juagdor de HTML
+const spanVidasEnemigo = document.getElementById('vidas-enemigo')  // Se crea variable para llamar el elemento vidas-enemigo de HTML
 
-let sectionMensajes = document.getElementById('resultado')                  //Se crea variable para llamar al ID de HTML 
-let ataquesDelJugador = document.getElementById('ataques-del-jugador')     
-let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo') 
+const sectionMensajes = document.getElementById('resultado')                  //Se crea variable para llamar al ID de HTML 
+const ataquesDelJugador = document.getElementById('ataques-del-jugador')     
+const ataquesDelEnemigo = document.getElementById('ataques-del-enemigo') 
 
 
 let ataqueJugador                   //Se crea varibale global (variables globales, se crean fuera de cualquier método, y las pueden usar todos. (las pueden usar cualquier método y se pueden leer desde la consola))
