@@ -1,36 +1,42 @@
+let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
+let sectionReiniciar = document.getElementById('reiniciar')            //Se crea variable para llamar a la seccion reiniciar de HTML
+let botonMascotaJugador = document.getElementById('boton-mascota')                  //Se crea variable para invocar al "id=boton-mascota" de HTML
+let botonFuego = document.getElementById('boton-fuego')
+let botonAgua = document.getElementById('boton-agua')
+let botonTierra = document.getElementById('boton-tierra')
+let botonReiniciar = document.getElementById('boton-reiniciar')                 //Se crea variable para llmar al boton reiniciar desde HTML
+
+let sectionSeleccionarMascota = document.getElementById('sel-mascota')            //Se crea variable para llamar a la seccion seleccionar-mascota de HTML
+//Se crean variables para llamarlas al crear condiciones
+let inputHipodoge = document.getElementById('hipodoge')
+let inputCapipepo = document.getElementById('capipepo')
+let inputRatigueya = document.getElementById('ratigueya')
+let spanMascotaJugador = document.getElementById('mascota-jugador')             //Se crea variable para llamar al span HTML de mascota-jugador para mostrar las vidas restantes de la moscota seleccionada
+
+let spanMascotaEnemigo = document.getElementById('mascota-enemigo')        // Se crea variable que invoca el ID 'mascota-enemigo' para modificarlo con .innerHTML
+
+let spanVidasJugador = document.getElementById('vidas-jugador')  //Se crea variable para llamar el elemento vidas-juagdor de HTML
+let spanVidasEnemigo = document.getElementById('vidas-enemigo')  // Se crea variable para llamar el elemento vidas-enemigo de HTML
+
+let sectionMensajes = document.getElementById('resultado')                  //Se crea variable para llamar al ID de HTML 
+let ataquesDelJugador = document.getElementById('ataques-del-jugador')     
+let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo') 
+
 
 let ataqueJugador                   //Se crea varibale global (variables globales, se crean fuera de cualquier método, y las pueden usar todos. (las pueden usar cualquier método y se pueden leer desde la consola))
-
 let ataqueEnemigo
-
-
 let vidasJugador = 3             // Se crean variables globales para el contador de vidas.
 let vidasEnemigo = 3
 
 //Se crea la funcion para que la escuhe el evento 'load'
 
 function iniciarJuego(){
-
-    let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
     sectionSeleccionarAtaque.style.display = 'none'                                         //Se oculta etiqueta de HTML con JS
-
-    let sectionReiniciar = document.getElementById('reiniciar')            //Se crea variable para llamar a la seccion reiniciar de HTML
     sectionReiniciar.style.display = 'none'                                         //Se oculta etiqueta de HTML con JS
-
-
-    let botonMascotaJugador = document.getElementById('boton-mascota')                  //Se crea variable para invocar al "id=boton-mascota" de HTML
     botonMascotaJugador.addEventListener('click',seleccionarMascotaJugador)                 //Se le agrega un evento a la variable "botonMascotaJugador" para que invoque la funcion "seleccionarMascotaJugador" al hacer click
-
-    let botonFuego = document.getElementById('boton-fuego')
     botonFuego.addEventListener('click',ataqueFuego)
-
-    let botonAgua = document.getElementById('boton-agua')
     botonAgua.addEventListener('click',ataqueAgua)
-
-    let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click',ataqueTierra)
-
-    let botonReiniciar = document.getElementById('boton-reiniciar')                 //Se crea variable para llmar al boton reiniciar desde HTML
     botonReiniciar.addEventListener('click',reiniciarJuego)
 }
 
@@ -38,20 +44,9 @@ function iniciarJuego(){
 
 function seleccionarMascotaJugador(){      
     
-    let sectionSeleccionarMascota = document.getElementById('sel-mascota')            //Se crea variable para llamar a la seccion seleccionar-mascota de HTML
-    sectionSeleccionarMascota.style.display = 'none'                                //Se oculta etiqueta de HTML con JS
-    
-    let sectionSeleccionarAtaque = document.getElementById('sel-ataque')            //Se crea variable para llamar a la seccion seleccionar-ataque de HTML
+    sectionSeleccionarMascota.style.display = 'none'                                //Se oculta etiqueta de HTML con JS 
     sectionSeleccionarAtaque.style.display = 'flex'                                //Se muestra etiqueta de HTML con JS... Se cambia de block a flex porque es la tecnologia que usamos
     
-    //Se crean variables para llamarlas al crear condiciones
-    let inputHipodoge = document.getElementById('hipodoge')
-    let inputCapipepo = document.getElementById('capipepo')
-    let inputRatigueya = document.getElementById('ratigueya')
-
-    let spanMascotaJugador = document.getElementById('mascota-jugador')             //Se crea variable para llamar al span HTML de mascota-jugador para mostrar las vidas restantes de la moscota seleccionada
-
-
     //Se crea la condicion para notificar al usuario la mascota segun el input seleccionado
 
     if (inputHipodoge.checked){                 //.checked siginifca si el input, en este caso 'radio' es falso o verdadero (si esta seleccionado o no)
@@ -73,7 +68,6 @@ function seleccionarMascotaJugador(){
 
 function seleccionarMascotaEnemigo(){
     let mascotaAleatorio = aleatorio(1,3)                                    //Se crea la variable aleatorio para que el enemigo selccione su mascota
-    let spanMascotaEnemigo = document.getElementById('mascota-enemigo')        // Se crea variable que invoca el ID 'mascota-enemigo' para modificarlo con .innerHTML
 
     if(mascotaAleatorio==1){
         spanMascotaEnemigo.innerHTML = 'Hipodoge'       // El ID de HTML 'mascota-enemigo' se mofiica con .innerHTML segun la opcion del if
@@ -128,8 +122,6 @@ function ataqueAleatorioEnemigo() {
 
 function combate(){
 
-    let spanVidasJugador = document.getElementById('vidas-jugador')  //Se crea variable para llamar el elemento vidas-juagdor de HTML
-    let spanVidasEnemigo = document.getElementById('vidas-enemigo')  // Se crea variable para llamar el elemento vidas-enemigo de HTML
 
     if (ataqueEnemigo == ataqueJugador) {
         crearMensaje("Empataste este turno")          //Se llama a la funcion 'crearMensaje' y que lo que esta dentro del parentesis cambie la variable 'resultado'
@@ -183,10 +175,6 @@ function revisarVidas(){
 //Se crea funcion para mostrar el hotorial dinamico
 
 function crearMensaje(resultado){                                            // Se guarda la variable 'resultado' como argumento para utilizarla en la funcion 'combate'
-    let sectionMensajes = document.getElementById('resultado')                  //Se crea variable para llamar al ID de HTML 
-    let ataquesDelJugador = document.getElementById('ataques-del-jugador')     
-    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')         
-    
     
     let nuevoAtaqueDelJugador = document.createElement('p')               //Se crea variable 'parrafo' para crear elmento 'p' de HTML para luego ser moficada en la siguiente linea
     let nuevoAtaqueDelEnemigo = document.createElement('p')
@@ -205,23 +193,18 @@ function crearMensaje(resultado){                                            // 
 //Se crea funcion para crear mensaje de si se gano o se perdio la partida
 
 function crearMensajeFinal(resultadoFinal){  
-    let sectionMensajes = document.getElementById('resultado')      
 
     sectionMensajes.innerHTML = resultadoFinal
  
 
     // Se desabilitan los botonenes de ataque cuando se pierde o se gana
     
-    let botonFuego = document.getElementById('boton-fuego')
     botonFuego.disabled = true
 
-    let botonAgua = document.getElementById('boton-agua')
     botonAgua.disabled = true
 
-    let botonTierra = document.getElementById('boton-tierra')
     botonTierra.disabled = true
 
-    let sectionReiniciar = document.getElementById('reiniciar')            //Se crea variable para llamar a la seccion reiniciar de HTML
     sectionReiniciar.style.display = 'block'  
 }
 
