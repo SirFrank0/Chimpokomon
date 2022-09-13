@@ -33,6 +33,7 @@ class Mokepon {                     //Creamos la primera clase, se tiene que eme
         this.nombre = nombre                    //Con this.atributo = atributo vamos ligando cada uno de los atributos a la clase
         this.foto = foto
         this.vida = vida
+        this.ataques = []                       // se coloca [] porque posteriormente le vamos a inyectar ataques con objetos literales
     }                      
 }                                      
 
@@ -45,11 +46,37 @@ let ratigueya = new Mokepon ('Ratigueya','/assets/Ic_unlock_cpm_velocirapstar.pn
 // console.log(hipodoge)                               // Sirve para ver valores o mapear errores
 
 
- let mokepones = []                   //creamos un arreglo o array para llamar a varios elementos (en este caso objetos) de una vez
+ //let mokepones = []                   //creamos un arreglo o array para llamar a varios elementos (en este caso objetos) de una vez
 
- mokepones.push(hipodoge,capipepo,ratigueya)            // con .push inyectamos objetos al array  let mokepones = [] , esto cuando la cantidad de onjetos camabia a lo largo del proyecto, ejemplo; agregar mas chimpokomones
+ //mokepones.push(hipodoge,capipepo,ratigueya)            // con .push inyectamos objetos al array  let mokepones = [] , esto cuando la cantidad de onjetos camabia a lo largo del proyecto, ejemplo; agregar mas chimpokomones
 
- console.log(mokepones) 
+ hipodoge.ataques.push(                             //Se inyectan valores al atibuto this.ataques de la clase Mokepon
+    {nombre: '💧', id: 'boton-agua'},                   // Se usa : para diferenciar variables
+    {nombre: '💧', id: 'boton-agua'},                   // Se crean 3 del mismo ataque dependiendo de la especialidad del chimpokomon
+    {nombre: '💧', id: 'boton-agua'},
+    {nombre: '🔥', id: 'boton-fuego'},
+    {nombre: '🌳', id: 'boton-tierra'}
+ )
+
+ capipepo.ataques.push(                             
+ {nombre: '🌳', id: 'boton-tierra'},
+ {nombre: '🌳', id: 'boton-tierra'},
+ {nombre: '🌳', id: 'boton-tierra'},
+ {nombre: '💧', id: 'boton-agua'},
+ {nombre: '🔥', id: 'boton-fuego'}
+)
+
+
+ratigueya.ataques.push(                             
+{nombre: '🔥', id: 'boton-fuego'},
+{nombre: '🔥', id: 'boton-fuego'},
+{nombre: '🔥', id: 'boton-fuego'},
+{nombre: '💧', id: 'boton-agua'},
+{nombre: '🌳', id: 'boton-tierra'}
+)
+
+console.log(hipodoge.ataques)
+
 
 
 //Se crea la funcion para que la escuhe el evento 'load'
