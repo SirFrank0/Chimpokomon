@@ -75,7 +75,7 @@ ratigueya.ataques.push(
 {nombre: '🌳', id: 'boton-tierra'}
 )
 
-console.log(Mokepones)
+//console.log(Mokepones)
 
 
 
