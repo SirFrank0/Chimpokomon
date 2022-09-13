@@ -28,6 +28,18 @@ let ataqueEnemigo
 let vidasJugador = 3             // Se crean variables globales para el contador de vidas.
 let vidasEnemigo = 3
 
+class Mokepon {                     //Creamos la primera clase, se tiene que emepezar por Mayuscula
+    constructor(nombre, foto, vida) {           //Usamos contrcutor para definir los atributos que tendrán nuestros futuros objetos.
+        this.nombre = nombre                    //Con this.atributo = atributo vamos ligando cada uno de los atributos a la clase
+        this.foto = foto
+        this.vida = vida
+    }                      
+}                                      
+
+
+
+
+
 //Se crea la funcion para que la escuhe el evento 'load'
 
 function iniciarJuego(){
