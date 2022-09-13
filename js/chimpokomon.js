@@ -36,7 +36,7 @@ class Mokepon {                     //Creamos la primera clase, se tiene que eme
     }                      
 }                                      
 
-
+let hipodoge = new Mokepon ('Hipodoge','/assets/pHqhVfx.png',5)   // con new Clase creamos un nuevo objeto de esa clase
 
 
 
