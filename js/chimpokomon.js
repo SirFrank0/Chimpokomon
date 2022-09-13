@@ -42,8 +42,14 @@ let capipepo = new Mokepon ('Capipepo', '/assets/Ic_unlock_cpm_snakat.png',5)
 
 let ratigueya = new Mokepon ('Ratigueya','/assets/Ic_unlock_cpm_velocirapstar.png',5)
 
-// console.log(hipodoge)                               //ver valores o mapear errores
+// console.log(hipodoge)                               // Sirve para ver valores o mapear errores
 
+
+ let mokepones = []                   //creamos un arreglo o array para llamar a varios elementos (en este caso objetos) de una vez
+
+ mokepones.push(hipodoge,capipepo,ratigueya)            // con .push inyectamos objetos al array  let mokepones = [] , esto cuando la cantidad de onjetos camabia a lo largo del proyecto, ejemplo; agregar mas chimpokomones
+
+ console.log(mokepones) 
 
 
 //Se crea la funcion para que la escuhe el evento 'load'
